@@ -1,4 +1,3 @@
-
 # Go Kit 2026 — Clean Architecture REST API Starter Kit
 
 Starter kit **Go RESTful API** dengan **Clean Architecture**, terinspirasi dari:
@@ -29,7 +28,7 @@ Dirancang untuk **scalable, testable, dan production-ready**.
 
 ## 🧱 Architecture Overview
 
-
+```text
 Controller (HTTP, v1)
    ↓
 Handler (HTTP response & error mapping)
@@ -39,4 +38,3 @@ Service (business logic, transaction orchestration)
 Domain (entity + repository interface)
    ↑
 Repository (GORM implementation)
-
