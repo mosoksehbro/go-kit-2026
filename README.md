@@ -38,8 +38,10 @@ Service (business logic, transaction orchestration)
 Domain (entity + repository interface)
    ↑
 Repository (GORM implementation)
+```
 
-## 📂 Struktur Folder
+---
+## 📂Struktur Folder
 
 ```text
 go-kit-2026/
@@ -130,3 +132,4 @@ go-kit-2026/
 ├── go.mod
 ├── go.sum
 └── README.md
+```
