@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# go-kit-2026
-Go Kit 2026 — Clean Architecture REST API Starter Kit
-=======
+
 # Go Kit 2026 — Clean Architecture REST API Starter Kit
 
 Starter kit **Go RESTful API** dengan **Clean Architecture**, terinspirasi dari:
