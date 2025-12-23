@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  api:
+    image: go-kit-2026:latest
+    container_name: go-kit-2026-api
+    restart: always
+    ports:
+      - "${APP_PORT:-8081}:8080"
+    env_file:
+      - ../../.env
+    volumes:
+      - ./logs:/app/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+   

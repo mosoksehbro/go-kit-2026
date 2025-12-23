@@ -1,27 +1,19 @@
 package handler
 
 import (
-	"net/http"
-
-	"go-kit-2026/internal/app/service"
+	appErr "go-kit-2026/internal/app/error"
 
 	"github.com/gin-gonic/gin"
 )
 
 func HandleError(c *gin.Context, err error) {
-	if appErr, ok := err.(*service.AppError); ok {
-		c.JSON(appErr.Status, gin.H{
-			"success": false,
-			"message": appErr.Message,
-			"error": gin.H{
-				"code": appErr.Code,
-			},
-		})
-		return
-	}
+	e := appErr.Map(err)
 
-	c.JSON(http.StatusInternalServerError, gin.H{
+	c.JSON(e.Status, gin.H{
 		"success": false,
-		"message": "internal server error",
+		"message": e.Message,
+		"error": gin.H{
+			"code": e.Code,
+		},
 	})
 }
